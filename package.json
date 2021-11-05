@@ -19,6 +19,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "test": "echo \"NOT YET IMPLEMENTED\"",
     "prepare": "npx babel src --out-dir lib"
   },
   "devDependencies": {
