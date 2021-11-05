@@ -2,7 +2,14 @@
   "name": "@teleology/redux",
   "version": "1.0.14",
   "description": "A suite of redux tools",
-  "repository": "git@github.com:teleology-io/teleology-redux.git",
+  "repository": {
+    "type": "git",
+    "url":  "git+https://github.com:teleology-io/teleology-redux.git"
+  },
+  "bugs": {
+    "url": "https://github.com/teleology-io/teleology-redux/issues"
+  },
+  "homepage": "https://github.com/teleology-io/teleology-redux#readme",
   "author": "Chris Sullivan <chrissullivan.dev@gmail.com>",
   "license": "MIT",
   "main": "lib/index.js",
