@@ -69,7 +69,7 @@ export const createStore = (options = {}) => {
     }
   };
   store.attachReducer = attachReducer;
-  store.attachRecuers = (...args) => args.map(attachReducer);
+  store.attachReducers = (...args) => args.map(attachReducer);
 
   if (opts.persistLayer) {
     store.subscribe(() => opts.persistLayer.save(store.getState()));
