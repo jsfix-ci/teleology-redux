@@ -1,8 +1,12 @@
-const save = (state) => (localStorage._s = JSON.stringify(state || {}));
+export default (options) => {
+  const key = options.persistKey;
 
-const restore = () => JSON.parse(localStorage._s || '{}');
+  const save = (state) => (localStorage[key] = JSON.stringify(state || {}));
 
-export default {
-  save,
-  restore,
+  const restore = () => JSON.parse(localStorage[key] || '{}');
+
+  return {
+    save,
+    restore,
+  };
 };

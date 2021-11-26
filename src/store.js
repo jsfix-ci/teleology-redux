@@ -6,6 +6,7 @@ import defaultPersistLayer from './persist';
 const DEFAULT_OPTIONS = {
   middleware: [],
   persist: true,
+  persistKey: '_s',
   devtools: false,
   state: {},
 };
@@ -20,7 +21,7 @@ export const createStore = (options = {}) => {
 
   // Make sure we use the default persistance layer
   if (opts.persist && !opts.persistLayer) {
-    opts.persistLayer = defaultPersistLayer;
+    opts.persistLayer = defaultPersistLayer(opts);
   }
 
   if (opts.persistLayer) {
